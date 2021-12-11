@@ -8,10 +8,10 @@ Prepare environment with minikube to create k8s with callico network plugin.
 - install minikube
 - create cluster
 - run callico network
-
+- run example app deployment to veryfi that setup is working
 
 Task 1 (Creating, usage of Role RBAC)
-You have specific infrastructure in you company, your CTO put pressure on moving towards least privilage role based access control model. You have two environments, production and development, it was recently reported that some developer messed with pods running on production, so that production database was affected. Your task is to separate production and development infrastructure into two namespaces, then create 3 roles, ops, dev and auditor, where prod has full access to prod and dev, dev have read only on prod and full access on dev, auditor has read only. 
+You have specific infrastructure (created with example yaml) in you company, your CTO put pressure on moving towards least privilage RBAC model. You have two type of pods production pods and development pods. It was recently reported that some developer messed pods running production application, so that production database was affected. Your task is to separate production and development infrastructure into two namespaces, then create 3 roles, ops, dev and auditor, where prod has full access to prod and dev, dev have read only on prod and full access on dev, auditor has read only. 
 
 1. Start example infrastructure from given yaml. Application shouldn't be complicated, it can be for example 4 running pods (managed by two deployments): 2 pods with name example_prod, and 2 pods with name example_dev.
 2. Create two namespaces
@@ -27,8 +27,8 @@ One of your data sciencist has created ticket that he can't do sth, look into da
 3. Test
 4. Save yaml
 
-Task 3 (Creating, usage of network policies to limit network traffic)
-Your network engineer reported that there is visible suspected network traffic on ports xyzs to images xyzs, by digging the configuration you've noticed that to much ports is open, limit ports only to required for proper functioning and for only group of ip addresses.
+Task 3 (Creating, usage of network policies to limit network traffic ingress/egress traffic)
+Your network engineer reported that there is visible suspected network traffic xyz pods are accessed with ssh port and large data transfer is done with xyz ports, by digging the configuration you've noticed that to much ports is open, limit ports only to required for proper functioning and for only group of ip addresses (data about reqiured ports in table).
 1. Start example infrastructure with no network policies.
 2. Create network policy to meet requirements from network enginner.
 3. Run commands to verify results
