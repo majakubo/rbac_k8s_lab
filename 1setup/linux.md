@@ -27,6 +27,8 @@ Check if done succcesfully,  your single-node minikube cluster should me listed 
 ```
 kubectl get no
 ```
+Similar to this:
+![image](https://user-images.githubusercontent.com/47759484/148371869-33e302ac-2320-4521-890c-814d6cf2898f.png)
 
 
 To stop minikube:
