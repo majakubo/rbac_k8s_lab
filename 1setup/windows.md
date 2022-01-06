@@ -4,6 +4,8 @@ In cmd opened with administrative rights:
 ```
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
+### Virtual Machine instalation:
+Download VM from [its side](https://www.virtualbox.org/).
 
 ### Docker instalation:
 Download and start Docker desktop from [Docker docs](https://docs.docker.com/desktop/windows/install/), make sure the **Enable Hyper-V Windows Features** option is selected.
