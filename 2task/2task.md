@@ -1,3 +1,8 @@
+### Install Openssl
+```
+choco install openssl
+```
+
 ### Create a client certificate
 
 Create a directory (cert) where to save the certificates for data scientist:
@@ -12,7 +17,6 @@ Generate a Client Sign Request:
 ```
 openssl req -new -key datascientist.key -out datascientist.csr -subj "/CN=datascientist/O=group1"
 ```
-
 Find PATH to .minikube on your PC (C:\Users\user\\.minikube)
 
 Generate the certificate:
