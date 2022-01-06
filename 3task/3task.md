@@ -20,3 +20,4 @@ Chceck with:
 kubectl get po,svc
 ```
 ![image](https://user-images.githubusercontent.com/47759484/148375234-a0f70d20-0fb8-4ac6-b26e-9c31f1dc58ea.png)
+Wait for all the STATUSes to show Running.
