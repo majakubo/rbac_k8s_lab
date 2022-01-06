@@ -25,3 +25,16 @@ kubectl version
 ```
 ![image](https://user-images.githubusercontent.com/47759484/147950390-b45db8a8-5019-4f9f-a1f0-0a138b57e5e4.png)
 
+### Starting a local Kubernetes cluster
+On Windows it is best to start minikube using either Hyper-V or Virtualbox - Docker networking does not work properly on Windows and you will run into issues.
+```
+minikube start --network-plugin=cni --cni=calico --driver=hyperv
+OR
+minikube start --network-plugin=cni --cni=calico --driver=virtualbox
+```
+These commands may take a moment. 
+
+Check if done succcesfully:
+```
+kubectl get no
+```
