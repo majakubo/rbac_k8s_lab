@@ -9,7 +9,7 @@ In cmd opened with administrative rights:
 Download and start Docker desktop from [Docker docs](https://docs.docker.com/desktop/windows/install/), make sure the **Enable Hyper-V Windows Features** option is selected.
 
 ### Minikube instalation:
-Type:
+In cmd type:
 ```
 choco install minikube
 minikube version
@@ -18,7 +18,7 @@ minikube version
 
 
 ### Kubectl instalation:
-Type:
+In cmd type:
 ```
 choco install kubernetes-cli
 kubectl version
