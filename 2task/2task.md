@@ -34,12 +34,14 @@ Check:
 kubectl config view
 ```
 ![image](https://user-images.githubusercontent.com/47759484/148402205-035bf298-32d0-4536-a1cb-0887a5e55460.png)
+
 Switch to the created user:
 ```
 kubectl config use-context datascientist-context
 kubectl config current-context
 ```
 ![image](https://user-images.githubusercontent.com/47759484/148402478-5a0cf91a-349b-45ae-aad0-7036028214b1.png)
+
 Check your lack of access:
 ```
 kubectl create namespace ns-test
@@ -47,4 +49,4 @@ kubectl create namespace ns-test
 ![image](https://user-images.githubusercontent.com/47759484/148408869-f4aca3ce-eae2-4932-ac09-5368b3f68ccf.png)
 
 
-###Grant access to the user
+### Grant access to the user
