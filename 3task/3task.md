@@ -11,5 +11,12 @@ As a result all Pods will be able to connect to the Internet only via selected p
 
 ### Deploy the resources and verify network traffic between Pods and host machine
 In cmd go to the directory with files for this exercise and:
-
-Create the nginx and hello pods in the default namespace using the provided manifests. The nginx Pod will be exposed outside the cluster using a Service of type NodePort and the hello Pod will be exposed internally using a Service of type ClusterIP. Run this command:
+```
+kubectl apply -f pods/
+```
+This command creates the nginx and hello pods in the default namespace using the provided manifests. The nginx Pod will be exposed outside the cluster using a Service of type NodePort and the hello Pod will be exposed internally using a Service of type ClusterIP. 
+Chceck with:
+```
+kubectl get po,svc
+```
+![image](https://user-images.githubusercontent.com/47759484/148375234-a0f70d20-0fb8-4ac6-b26e-9c31f1dc58ea.png)
