@@ -33,11 +33,14 @@ OR
 minikube start --network-plugin=cni --cni=calico --driver=virtualbox
 ```
 These commands may take a moment. 
+If you're getting error about not enough memory, but it seems like you have enough (Memory=2200MB, Disk=20000MB) try restarting your computer and running starting command as the first thing.  
 
 Check if done succcesfully:
 ```
 kubectl get no
 ```
+![image](https://user-images.githubusercontent.com/47759484/148371407-d86f9131-38c6-4616-a25d-410e49aa9ce3.png)
+
 
 To stop minikube:
 ```
