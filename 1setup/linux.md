@@ -18,3 +18,23 @@ sudo apt-get update
 sudo apt-get install -y kubectl
 ```
 
+### Starting a local Kubernetes cluster
+```
+minikube start --network-plugin=cni --cni=calico
+```
+
+These commands may take a moment. 
+
+Check if done succcesfully,  your single-node minikube cluster should me listed as ready:
+```
+kubectl get no
+```
+
+To stop minikube:
+```
+minikube stop
+```
+To delete minikube completely:
+```
+minikube delete
+```
