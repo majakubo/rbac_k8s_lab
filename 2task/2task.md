@@ -14,6 +14,7 @@ openssl req -new -key datascientist.key -out datascientist.csr -subj "/CN=datasc
 ```
 
 Find PATH to .minikube on your PC (C:\Users\user\\.minikube)
+
 Generate the certificate:
 ```
 openssl x509 -req -in datascientist.csr -CA PATH\ca.crt -CAkey PATH\ca.key -CAcreateserial -out datascientist.crt -days 500
