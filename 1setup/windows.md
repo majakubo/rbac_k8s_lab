@@ -38,3 +38,12 @@ Check if done succcesfully:
 ```
 kubectl get no
 ```
+
+To stop minikube:
+```
+minikube stop
+```
+To delete minikube completely:
+```
+minikube delete
+```
