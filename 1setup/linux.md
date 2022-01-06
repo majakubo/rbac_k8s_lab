@@ -22,13 +22,12 @@ sudo apt-get install -y kubectl
 ```
 minikube start --network-plugin=cni --cni=calico
 ```
-
 These commands may take a moment. 
-
 Check if done succcesfully,  your single-node minikube cluster should me listed as ready:
 ```
 kubectl get no
 ```
+
 
 To stop minikube:
 ```
