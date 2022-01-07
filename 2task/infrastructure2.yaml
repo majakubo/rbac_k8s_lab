@@ -23,12 +23,13 @@ spec:
         - containerPort: 6066
 ---
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: spark-worker
   labels:
     app: spark-worker
 spec:
+  replicas: 1
   selector:
     matchLabels:
       name: spark-worker
@@ -74,3 +75,32 @@ spec:
   selector:
     app: spark-client
   clusterIP: None
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: bob-smart
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: datasciencist
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: datasciencist
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: bob-smart 
+roleRef:
+  kind: Role
+  name: datasciencist
+  apiGroup: rbac.authorization.k8s.io
