@@ -42,7 +42,7 @@ For verifications of permisions it's convinient to use *can-i*, for example:
 > kubectl delete -f 1task/infrasturcture1.yaml
 2. Delete created roles and rolebindings
 
-## Help:
+#### Help:
 Create two namespaces:
 https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/#create-new-namespaces
 
@@ -90,7 +90,7 @@ Run
 1. Run
 > kubectl apply -f 3task/
 
-## Help:
+#### Help:
 Create NetworkPolicy:
 https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource
 
