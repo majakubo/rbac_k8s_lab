@@ -38,9 +38,19 @@ For verifications of permisions it's convinient to use *can-i*, for example:
 1. Upload changed yaml file of infrastructure1 and yaml files with newly created roles and rolebindings.
 
 ### Cleanup:
-1. Run
+1. Run to delete created roles and rolebindings
 > kubectl delete -f 1task/infrasturcture1.yaml
 2. Delete created roles and rolebindings
+
+## Help:
+Create two namespaces:
+https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/#create-new-namespaces
+
+Create ClusterRole (across namespaces):
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/#clusterrole-example
+
+Create RoleBinding:
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-example
 
 ---
 
@@ -79,3 +89,10 @@ Run
 ### Cleanup:
 1. Run
 > kubectl apply -f 3task/
+
+## Help:
+Create NetworkPolicy:
+https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource
+
+Ingress from:
+https://kubernetes.io/docs/concepts/services-networking/network-policies/#behavior-of-to-and-from-selectors
