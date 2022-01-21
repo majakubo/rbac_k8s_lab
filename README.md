@@ -9,17 +9,17 @@ Prepare environment with minikube to create k8s with callico network plugin.
 
 ## Task 1: [Creating] Usage of Role RBAC
 
-Your company have specific infrastructure described with *1task/infrastructure1.yaml*. Your CTO puts pressure on moving towards the least privilage RBAC model. You have two type of objects: production objects named *-prod and development objects named *-dev. It has been recently reported that some developers messed pods running the production application, so that production nginx was affected. Your task is to separate production and development infrastructure into two namespaces, then create 3 roles: ops, dev and auditor. 
+Your company have specific infrastructure described with *1task/infrastructure1.yaml*. Your CTO puts pressure on moving towards the least privilage RBAC model. You have two type of objects: production objects named *-prod and development objects named *-dev. It has been recently reported that some developers messed pods running the production application, so that production nginx was affected. Your task is to separate production and development infrastructure into two namespaces, then create 3 types of users: ops, dev and auditor. 
 
-* **ops** role should have full access to whole infrastructure
-* **dev** should have read only on prod namespace and full access on dev namespace
-* **auditor** should read only to dev and prod
+* **ops** user type should have full access to whole infrastructure
+* **dev** user type should have read only on prod namespace and full access on dev namespace
+* **auditor** user type should have read only to dev and prod
 
 After you create required roles, assign them to existing service accounts: 
 
-* *eve-auditor* should have a role **auditor**
-* *alice-ops* should have a role **ops**
-* *bob-developer* should have a role **developer**
+* *eve-auditor* should be **auditor**
+* *alice-ops* should be **ops**
+* *bob-developer* should be **developer**
 
 ### Prework:
 run
